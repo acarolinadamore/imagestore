@@ -2,32 +2,360 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.main-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.produtos-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+}
+
+.produtos-menu {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.produtos-menu-title-container {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.produtos-menu-title {
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+.produtos-menu-acoes {
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.menu-lateral {
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.menu-title {
+  font-size: 26px;
+  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.menu-items {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.all-products {
+  width: 100%;
+  padding: 0 50px;
+}
+
+.produtos-container-cima {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 500px;
+  gap: 0 25px;
+}
+
+.produto-item {
+  width: 50%;
+  height: 300px;
+  background-color: red;
+}
+/**/
+/* Estilos para a seção da direita */
+/* Estilos para a seção da esquerda */
+.destaques-esquerda {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  gap: 25px;
+}
+
+.produto-1,
+.produto-2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  background-color: blueviolet; /* Cor de fundo para os retângulos da esquerda */
+  border-radius: 20px; /* Border-radius aplicado a todos os retângulos */
+  overflow: hidden; /* Garante que a imagem fique dentro do retângulo */
+}
+
+.produto-3,
+.produto-4 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-color: blueviolet; /* Cor de fundo para os retângulos da esquerda */
+  border-radius: 20px; /* Border-radius aplicado a todos os retângulos */
+  overflow: hidden; /* Garante que a imagem fique dentro do retângulo */
+}
+
+/* Estilos para as imagens */
+.imagem-produto-1,
+.imagem-produto-2,
+.imagem-produto-3,
+.imagem-produto-4 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.3s ease; /* Transição suave para o efeito de zoom */
+}
+
+/* Efeito de zoom suave no hover */
+.imagem-produto-1:hover,
+.imagem-produto-2:hover,
+.imagem-produto-3:hover,
+.imagem-produto-4:hover {
+  transform: scale(1.05); /* Zoom de 5% no hover */
+}
+
+/* Estilos para a seção da direita */
+.destaques-direita {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  height: 100%;
+  gap: 25px;
+}
+
+/* Não é necessário aplicar o border-radius diretamente aos retângulos da direita */
+
+.imagem-container {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit; /* Herda o border-radius do contêiner pai */
+  overflow: hidden; /* Garante que a imagem fique dentro do retângulo */
+}
+
+/**/
+
+.produtos-container-baixo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.btn-container button {
+  /* Estilos para o botão dentro do contêiner */
+  background-color: #f78aae; /* Cor de fundo verde */
+  color: white; /* Cor do texto branca */
+  padding: 10px 20px; /* Preenchimento interno do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Remover a borda */
+  cursor: pointer; /* Alterar o cursor ao passar por cima */
+  border-radius: 5px; /* Adicionar borda arredondada */
+  width: 180px;
+  margin-top: 40px;
+}
+
+/**/
+
+.inscrever-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  padding: 30px;
+  background-color: #ffc850;
+  color: #000000;
+  gap: 10px;
+  padding-bottom: 45px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 40px;
+}
+
+.inscrever-container h2 {
+  font-size: 20px;
+}
+
+.inscrever-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.inscrever-form .email-input-style {
+  padding: 10px;
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.btn-white {
+  width: 180px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid #3b3b3b;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.btn-white:hover {
+  background-color: #f1abc2;
+  color: white;
+  border: 2px solid white;
+  transform: scale(1.01, 1.05);
+}
+
+/**/
+
+footer {
+  background-color: #0e0e0e;
+  color: #fff;
+  padding: 60px;
+  width: 100%;
+}
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo-container {
+  width: 280px;
+}
+
+.footer-logo {
+  height: 35px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 5px;
+}
+
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-links ul li strong {
+  display: block;
+}
+
+.footer-titulo {
+  color: #f5c9d8;
+  font-size: 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 5px;
+}
+
+/**/
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  opacity: 0.9;
+  transition: opacity 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.scroll-to-top a {
+  background-color: #f1abc2;
+  color: #ffffff;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.scroll-to-top a:hover {
+  background-color: #ccc;
+  opacity: 1;
+}
+
+.scroll-to-top a .material-symbols-outlined {
+  font-size: 18px;
+}
+
+.material-symbols-outlined {
+  font-size: 18px !important;
 }
