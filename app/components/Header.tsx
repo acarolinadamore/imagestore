@@ -7,7 +7,12 @@ const Header = () => {
   return (
     <div className="header-top-container flex flex-row items-center bg-white">
       <a href="/">
-        <img src="/assets/logo-rosa.svg" alt="Logo" width={140} height={100} />
+        <img
+          src="/assets/icons/logo-rosa.svg"
+          alt="Logo"
+          width={140}
+          height={100}
+        />
       </a>
 
       <div className="search relative">

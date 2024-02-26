@@ -2,6 +2,7 @@ import RootLayout from '../app/layout';
 import Header from '../app/components/Header';
 import '../app/components/Header.css';
 import Link from 'next/link';
+import cardList from './data';
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
               <li>
                 <Link href="/pages/listar-produtos" className="flex">
                   <img
-                    src="/assets/icon-sapato.png"
+                    src="/assets/icons/icon-sapato.png"
                     alt="Personalizáveis"
                     width={25}
                     className="mr-2"
@@ -26,7 +27,7 @@ export default function Home() {
               <li>
                 <Link href="/pages/listar-produtos" className="flex">
                   <img
-                    src="/assets/icon-star.svg"
+                    src="/assets/icons/icon-star.svg"
                     alt="Personalizáveis"
                     width={25}
                     className="mr-2"
@@ -37,7 +38,7 @@ export default function Home() {
               <li>
                 <Link href="/pages/listar-produtos" className="flex">
                   <img
-                    src="/assets/icon-book.svg"
+                    src="/assets/icons/icon-book.svg"
                     alt="Personalizáveis"
                     width={25}
                     className="mr-2"
@@ -48,7 +49,7 @@ export default function Home() {
               <li>
                 <Link href="/pages/listar-produtos" className="flex">
                   <img
-                    src="/assets/icon-kit.svg"
+                    src="/assets/icons/icon-kit.svg"
                     alt="Personalizáveis"
                     width={25}
                     className="mr-2"
@@ -64,7 +65,7 @@ export default function Home() {
             <div className="produtos-menu-title-container">
               <h2 className="produtos-menu-title flex">
                 <img
-                  src="/assets/icon-star.svg"
+                  src="/assets/icons/icon-star.svg"
                   alt="Personalizáveis"
                   width={25}
                   className="mr-3"
@@ -83,14 +84,14 @@ export default function Home() {
               <div className="destaques-esquerda">
                 <div className="produto-1">
                   <img
-                    src="/assets/kit3.jpg"
+                    src="/assets/images/kit3.jpg"
                     alt="Imagem 1"
                     className="imagem-produto-1"
                   />
                 </div>
                 <div className="produto-2">
                   <img
-                    src="/assets/kit2.jpg"
+                    src="/assets/images/kit2.jpg"
                     alt="Imagem 2"
                     className="imagem-produto-2"
                   />
@@ -100,7 +101,7 @@ export default function Home() {
                 <div className="produto-3">
                   <div className="imagem-container">
                     <img
-                      src="/assets/tenis-destque1.jpg"
+                      src="/assets/images/tenis-destque1.jpg"
                       alt="Imagem 2"
                       className="imagem-produto-2"
                     />
@@ -109,7 +110,7 @@ export default function Home() {
                 <div className="produto-4">
                   <div className="imagem-container">
                     <img
-                      src="/assets/tenis-destque3.jpg"
+                      src="/assets/images/tenis-destque3.jpg"
                       alt="Imagem 2"
                       className="imagem-produto-2"
                     />
@@ -117,18 +118,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="produtos-container-baixo">
-              <div className="destaques-direita">
-                <div className="produto-item">Retângulo 1</div>
-                <div className="produto-item">Retângulo 2</div>
-              </div>
-              <div className="destaques-direita">
-                <div className="produto-item">Retângulo 3</div>
-                <div className="produto-item">Retângulo 4</div>
-              </div>
-              <div className="destaques-direita">
-                <div className="produto-item">Retângulo 3</div>
-                <div className="produto-item">Retângulo 4</div>
+            <div className="card-container mx-auto py-10">
+              <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-6">
+                {cardList.map((card) => (
+                  <div className="shadow-lg rounded-lg">
+                    <img className="rounded-lg" src={card.img} />
+                    <div className="p-5">
+                      <h3 className="text-2xl font-bold text-slate-700 mb-3">
+                        {card.title}
+                      </h3>
+                      <p className="text-md font-normal text-gray-600">
+                        {card.text}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
             <div className="btn-container">
@@ -159,7 +163,7 @@ export default function Home() {
           <div className="footer-logo-container">
             <a href="/">
               <img
-                src="/assets/logo-branca.svg"
+                src="/assets/icons/logo-branca.svg"
                 alt="Logo"
                 width={140}
                 height={100}
