@@ -1,11 +1,12 @@
-.menu-lateral {
+.menu-lateral-admin {
   display: flex;
   flex-direction: column;
   width: 250px;
-  padding-left: 20%;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  padding-left: 20%;
+  margin-top: 35px;
 }
 
 .menu-lateral nav {
@@ -46,6 +47,7 @@
   align-items: center;
   font-weight: 800;
   font-size: 26px;
+  white-space: nowrap;
 }
 
 .form container {
@@ -53,4 +55,8 @@
   flex-direction: column;
   width: 70%;
   height: 100%;
+}
+
+.nowrap {
+  white-space: nowrap;
 }

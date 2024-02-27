@@ -1,0 +1,19 @@
+.bg-rect {
+  background-color: #f5c9d8;
+  height: 65%;
+  width: 100%;
+  z-index: -1;
+  margin-top: 330px;
+}
+
+.login-container {
+  width: 100%;
+}
+
+.form-container {
+  width: 350px;
+}
+
+.btn-cadastrar {
+  width: 220px;
+}

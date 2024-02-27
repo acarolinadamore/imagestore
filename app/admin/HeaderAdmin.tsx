@@ -16,10 +16,10 @@ const HeaderAdmin = () => {
       </a>
       <div className="header-midle-container"></div>
       <div className="header-client-area">
-        <Link href="/" className="flex">
+        <Link href="/pages/login">
           <p>Login</p>
         </Link>
-        <Link href="/" className="flex">
+        <Link href="../">
           <p>Sair</p>
         </Link>
       </div>

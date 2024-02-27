@@ -4,63 +4,14 @@ import cardList from './data';
 import React from 'react';
 import RootLayout from '../app/layout';
 import Header from '../app/components/Header';
+import SidebarStore from './components/SidebarStore';
 
 export default function Home() {
   return (
     <RootLayout>
       <Header />
       <section className="main-container">
-        <div className="menu-lateral flex flex-col items-center ml-5">
-          <h2 className="menu-title mb-8">Explore</h2>
-          <nav>
-            <ul className="ml-1">
-              <li>
-                <Link href="/pages/listar-produtos" className="flex">
-                  <img
-                    src="/assets/icons/icon-sapato.png"
-                    alt="Personalizáveis"
-                    width={25}
-                    className="mr-2"
-                  />
-                  <p>Tênis</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/listar-produtos" className="flex">
-                  <img
-                    src="/assets/icons/icon-star.svg"
-                    alt="Personalizáveis"
-                    width={25}
-                    className="mr-2"
-                  />
-                  <p>Personalizáveis</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/listar-produtos" className="flex">
-                  <img
-                    src="/assets/icons/icon-book.svg"
-                    alt="Personalizáveis"
-                    width={25}
-                    className="mr-2"
-                  />
-                  <p>E-books</p>
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/listar-produtos" className="flex">
-                  <img
-                    src="/assets/icons/icon-kit.svg"
-                    alt="Personalizáveis"
-                    width={25}
-                    className="mr-2"
-                  />
-                  <p>Kits</p>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
+        <SidebarStore />
         <section className="produtos-container">
           <div className="produtos-menu">
             <div className="produtos-menu-title-container">
@@ -95,7 +46,7 @@ export default function Home() {
             </div>
             <div className="flex flex-row gap-6">
               <div>
-                <Link href="/pages/listar-produtos" className="flex">
+                <Link href="/pages/listar-produtos">
                   <img
                     src="/assets/icons/icon-order.svg"
                     alt="Carrinho"
@@ -106,12 +57,11 @@ export default function Home() {
                 </Link>
               </div>
               <div>
-                <Link href="/pages/listar-produtos" className="flex">
+                <Link href="/pages/listar-produtos">
                   <img
                     src="/assets/icons/icon-filter.svg"
                     alt="Carrinho"
                     width={25}
-                    className="mr-2"
                   />
                   <p>Filtrar</p>
                 </Link>
@@ -136,7 +86,7 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="destaques-direita">
+              <div className="destaques-direita flex flex-row gap-7">
                 <div className="produto-3">
                   <div className="imagem-container">
                     <img
@@ -215,16 +165,16 @@ export default function Home() {
                 <strong>Explore</strong>
               </li>
               <li>
-                <Link href="/pages/listar-produtos">Tênis</Link>
+                <Link href="/pages/ver-produto">Tênis</Link>
               </li>
               <li>
-                <Link href="/pages/listar-produtos">Personalizáveis</Link>
+                <Link href="/pages/ver-produto">Personalizáveis</Link>
               </li>
               <li>
-                <Link href="/pages/listar-produtos">E-books</Link>
+                <Link href="/pages/ver-produto">E-books</Link>
               </li>
               <li>
-                <Link href="/pages/listar-produtos">Kits</Link>
+                <Link href="/pages/ver-produto">Kits</Link>
               </li>
             </ul>
           </div>

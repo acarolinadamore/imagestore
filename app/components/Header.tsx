@@ -24,7 +24,7 @@ const Header = () => {
         <BsSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
       </div>
       <div>
-        <Link href="/pages/listar-produtos" className="flex">
+        <Link href="/pages/listar-produtos">
           <img
             src="/assets/icons/icon-carrinho.svg"
             alt="Carrinho"
@@ -35,8 +35,10 @@ const Header = () => {
         </Link>
       </div>
       <div className="header-client-area">
-        <button>Registre-se</button>
-        <Link href="/admin" className="flex">
+        <Link href="/pages/login">
+          <span>Registre-se</span>
+        </Link>
+        <Link href="/admin">
           <p>Login</p>
         </Link>
       </div>

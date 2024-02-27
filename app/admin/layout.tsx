@@ -1,5 +1,3 @@
-// app/admin/layout.tsx
-
 import React from 'react';
 import HeaderAdmin from './HeaderAdmin';
 import SidebarAdmin from './SidebarAdmin';

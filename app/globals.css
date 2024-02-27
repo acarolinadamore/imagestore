@@ -113,11 +113,9 @@ nav {
 .produto-item {
   width: 50%;
   height: 300px;
-  background-color: red;
 }
 /**/
-/* Estilos para a seção da direita */
-/* Estilos para a seção da esquerda */
+
 .destaques-esquerda {
   display: flex;
   flex-direction: column;
@@ -132,9 +130,8 @@ nav {
   flex-direction: column;
   width: 100%;
   height: 50%;
-  background-color: blueviolet; /* Cor de fundo para os retângulos da esquerda */
-  border-radius: 20px; /* Border-radius aplicado a todos os retângulos */
-  overflow: hidden; /* Garante que a imagem fique dentro do retângulo */
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .produto-3,
@@ -143,12 +140,10 @@ nav {
   flex-direction: column;
   width: 50%;
   height: 100%;
-  background-color: blueviolet; /* Cor de fundo para os retângulos da esquerda */
-  border-radius: 20px; /* Border-radius aplicado a todos os retângulos */
-  overflow: hidden; /* Garante que a imagem fique dentro do retângulo */
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-/* Estilos para as imagens */
 .imagem-produto-1,
 .imagem-produto-2,
 .imagem-produto-3,
@@ -157,18 +152,16 @@ nav {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition: transform 0.3s ease; /* Transição suave para o efeito de zoom */
+  transition: transform 0.3s ease;
 }
 
-/* Efeito de zoom suave no hover */
 .imagem-produto-1:hover,
 .imagem-produto-2:hover,
 .imagem-produto-3:hover,
 .imagem-produto-4:hover {
-  transform: scale(1.05); /* Zoom de 5% no hover */
+  transform: scale(1.05);
 }
 
-/* Estilos para a seção da direita */
 .destaques-direita {
   display: flex;
   flex-direction: row;
@@ -177,13 +170,11 @@ nav {
   gap: 25px;
 }
 
-/* Não é necessário aplicar o border-radius diretamente aos retângulos da direita */
-
 .imagem-container {
   width: 100%;
   height: 100%;
-  border-radius: inherit; /* Herda o border-radius do contêiner pai */
-  overflow: hidden; /* Garante que a imagem fique dentro do retângulo */
+  border-radius: inherit;
+  overflow: hidden;
 }
 
 /**/
@@ -204,15 +195,14 @@ nav {
 
 .btn-container button,
 .btn-pink {
-  /* Estilos para o botão dentro do contêiner */
-  background-color: #f78aae; /* Cor de fundo verde */
-  color: white; /* Cor do texto branca */
-  padding: 10px 20px; /* Preenchimento interno do botão */
-  font-size: 16px; /* Tamanho da fonte */
-  border: none; /* Remover a borda */
-  cursor: pointer; /* Alterar o cursor ao passar por cima */
-  border-radius: 5px; /* Adicionar borda arredondada */
-  width: 180px;
+  background-color: #f78aae;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  min-width: 180px;
   margin-bottom: 40px;
 }
 
@@ -404,6 +394,11 @@ footer {
       cursor: pointer;
     }
   }
+}
+
+#switch_right,
+#switch_left {
+  display: none;
 }
 
 .up-in-toggle label:first-of-type {

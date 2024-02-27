@@ -1,70 +1,87 @@
 import React from 'react';
 
-const PerfilForm = () => {
+const page = () => {
   return (
-    <div className="w-full max-w-lg bg-white border border-gray-300 shadow-md rounded-lg px-8 pt-6 pb-8 mb-4 mt-2">
+    <div className="w-full max-w-lg bg-white border border-gray-300 shadow-md rounded-lg px-8 pt-6 mb-4 mt-2 pb-0">
       <div className="mb-6">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
           htmlFor="nomeCompleto"
         >
-          Nome Completo
+          Nome do Produto
         </label>
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="nomeCompleto"
           type="text"
-          placeholder="Digite seu nome completo"
+          placeholder="Digite o nome do produto"
         />
       </div>
       <div className="mb-6">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="email"
+          htmlFor="descricaoProduto"
         >
-          Email
+          Descrição
+        </label>
+        <input
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          id="preco"
+          type="text"
+          placeholder="Digite a descrição"
+        />
+      </div>
+      <div className="mb-6">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="preco"
+        >
+          Preço
         </label>
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="email"
-          type="email"
-          placeholder="Digite seu email"
+          type="text"
+          placeholder="Digite o preço"
         />
       </div>
       <div className="mb-6">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="cpf"
+          htmlFor="qtd"
         >
-          CPF
+          Qtd
         </label>
         <input
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
           id="cpf"
           type="text"
-          placeholder="Digite seu CPF"
+          placeholder="Digite a quantidade"
         />
       </div>
       <div className="mb-6 relative">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="pais"
+          htmlFor="status"
         >
-          País
+          Status
         </label>
         <select
           className="block appearance-none w-full bg-white border border-gray-200 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          id="pais"
+          id="status"
           defaultValue=""
         >
           <option value="" disabled hidden>
             Selecione
           </option>
           <option value="ativo" className="text-gray-700">
-            Brasil
+            Ativo
           </option>{' '}
           <option value="inativo" className="text-gray-700">
-            Outro país
+            Inativo
+          </option>{' '}
+          <option value="pendente" className="text-gray-700">
+            Pendente
           </option>{' '}
         </select>
         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3 pt-8 text-gray-700">
@@ -77,6 +94,7 @@ const PerfilForm = () => {
           </svg>
         </div>
       </div>
+
       <div className="mb-6">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
@@ -94,13 +112,13 @@ const PerfilForm = () => {
       <div className="mb-6 relative">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="cep"
+          htmlFor="status"
         >
-          UF
+          Status
         </label>
         <select
           className="block appearance-none w-full bg-white border border-gray-200 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          id="uf"
+          id="status"
           defaultValue=""
         >
           <option value="" disabled hidden>
@@ -126,17 +144,17 @@ const PerfilForm = () => {
       <div className="mb-6 relative">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="cidade"
+          htmlFor="status"
         >
           Cidade
         </label>
         <select
           className="block appearance-none w-full bg-white border border-gray-200 hover:border-gray-400 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
-          id="cidade"
+          id="status"
           defaultValue=""
         >
           <option value="" disabled hidden>
-            Selecione
+            Cidade
           </option>
           <option value="ativo" className="text-gray-700">
             Campo Grande
@@ -155,22 +173,17 @@ const PerfilForm = () => {
           </svg>
         </div>
       </div>
-      <div className="mb-6">
+      <div className="mb-1">
         <label
           className="block text-gray-700 text-sm font-bold mb-2"
-          htmlFor="endereco"
+          htmlFor="pais"
         >
-          Endereço
+          Upload de fotos do produto
         </label>
-        <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="endereco"
-          type="text"
-          placeholder="Digite seu endereço"
-        />
+        <button className="btn-pink mt-2">Upload</button>
       </div>
     </div>
   );
 };
 
-export default PerfilForm;
+export default page;
