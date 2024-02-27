@@ -13,7 +13,7 @@ const Layout = () => {
         <div className="width-30">
           <SidebarAdmin />
         </div>
-        <div className="admin-container pl-5">
+        <div className="admin-container">
           <div className="admin-menu">
             <div className="admin-menu-title-container">
               <h2 className="admin-menu-title flex">
@@ -26,8 +26,11 @@ const Layout = () => {
                 Perfil
               </h2>
             </div>
-            <div className="width-70">
+            <div className="width-100">
               <PerfilForm />
+              <div className="btn-container-left">
+                <button className="btn-pink ">Salvar</button>
+              </div>
             </div>
           </div>
         </div>

@@ -202,7 +202,8 @@ nav {
   justify-content: flex-end;
 }
 
-.btn-container button {
+.btn-container button,
+.btn-pink {
   /* Estilos para o botão dentro do contêiner */
   background-color: #f78aae; /* Cor de fundo verde */
   color: white; /* Cor do texto branca */
@@ -213,6 +214,12 @@ nav {
   border-radius: 5px; /* Adicionar borda arredondada */
   width: 180px;
   margin-bottom: 40px;
+}
+
+.btn-container-left {
+  display: flex;
+  justify-content: flex-start;
+  padding: 15px 0;
 }
 
 /**/

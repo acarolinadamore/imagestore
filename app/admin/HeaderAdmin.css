@@ -7,10 +7,12 @@
   background-color: white;
   color: black;
   margin-top: 25px;
+  padding: 0 15px;
 }
 
 .header-midle-container {
-  width: 62%;
+  width: 70%;
+  background-color: bisque;
 }
 
 .header-client-area {
@@ -26,7 +28,6 @@
   width: 100%;
 }
 
-.width-70 {
-  width-70: 100%;
-  magin-top: 100px;
+.width-100 {
+  width: 100%;
 }
