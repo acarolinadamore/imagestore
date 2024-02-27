@@ -23,7 +23,17 @@ const Header = () => {
         />
         <BsSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
       </div>
-      <div>Carrinho</div>
+      <div>
+        <Link href="/pages/listar-produtos" className="flex">
+          <img
+            src="/assets/icons/icon-carrinho.svg"
+            alt="Carrinho"
+            width={25}
+            className="mr-2"
+          />
+          <p>Carrinho</p>
+        </Link>
+      </div>
       <div className="header-client-area">
         <button>Registre-se</button>
         <button>Login</button>

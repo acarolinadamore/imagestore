@@ -1,8 +1,9 @@
-import RootLayout from '../app/layout';
-import Header from '../app/components/Header';
 import '../app/components/Header.css';
 import Link from 'next/link';
 import cardList from './data';
+import React from 'react';
+import RootLayout from '../app/layout';
+import Header from '../app/components/Header';
 
 export default function Home() {
   return (
@@ -74,9 +75,47 @@ export default function Home() {
               </h2>
             </div>
             <div className="produtos-menu-acoes">
-              <div>Select</div>
-              <div>Order</div>
-              <div>Filter</div>
+              <div className="up-in-toggle">
+                <input
+                  type="radio"
+                  id="switch_left"
+                  name="switch_2"
+                  value="yes"
+                />
+                <label htmlFor="switch_left">Feminino</label>
+                <input
+                  type="radio"
+                  id="switch_right"
+                  name="switch_2"
+                  value="no"
+                  defaultChecked
+                />
+                <label htmlFor="switch_right">Masculino</label>
+              </div>
+            </div>
+            <div className="flex flex-row gap-6">
+              <div>
+                <Link href="/pages/listar-produtos" className="flex">
+                  <img
+                    src="/assets/icons/icon-order.svg"
+                    alt="Carrinho"
+                    width={25}
+                    className="mr-2"
+                  />
+                  <p>Ordenar</p>
+                </Link>
+              </div>
+              <div>
+                <Link href="/pages/listar-produtos" className="flex">
+                  <img
+                    src="/assets/icons/icon-filter.svg"
+                    alt="Carrinho"
+                    width={25}
+                    className="mr-2"
+                  />
+                  <p>Filtrar</p>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="all-products">
