@@ -45,64 +45,69 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-row gap-6">
-              <div>
-                <Link href="/pages/listar-produtos">
-                  <img
-                    src="/assets/icons/icon-order.svg"
-                    alt="Carrinho"
-                    width={25}
-                    className="mr-2"
-                  />
-                  <p>Ordenar</p>
-                </Link>
-              </div>
-              <div>
-                <Link href="/pages/listar-produtos">
-                  <img
-                    src="/assets/icons/icon-filter.svg"
-                    alt="Carrinho"
-                    width={25}
-                  />
-                  <p>Filtrar</p>
-                </Link>
-              </div>
+              <a href="/" className="flex items-center">
+                <img
+                  src="/assets/icons/icon-order.svg"
+                  alt="Carrinho"
+                  width={25}
+                  className="mr-2"
+                />
+                <p>Ordenar</p>
+              </a>
+              <a href="/" className="flex items-center">
+                <img
+                  src="/assets/icons/icon-filter.svg"
+                  alt="Filtrar"
+                  width={25}
+                  className="mr-2"
+                />
+                <p>Filtrar</p>
+              </a>
             </div>
           </div>
           <div className="all-products">
             <div className="produtos-container-cima">
               <div className="destaques-esquerda">
                 <div className="produto-1">
-                  <img
-                    src="/assets/images/kit3.jpg"
-                    alt="Imagem 1"
-                    className="imagem-produto-1"
-                  />
+                  <a href="/pages/ver-produto">
+                    <img
+                      src="/assets/images/kit3.jpg"
+                      alt="Imagem 1"
+                      className="imagem-produto-1"
+                    />
+                  </a>
                 </div>
                 <div className="produto-2">
-                  <img
-                    src="/assets/images/kit2.jpg"
-                    alt="Imagem 2"
-                    className="imagem-produto-2"
-                  />
+                  <a href="/pages/ver-produto">
+                    <img
+                      src="/assets/images/kit2.jpg"
+                      alt="Imagem 2"
+                      className="imagem-produto-2"
+                    />
+                  </a>
                 </div>
               </div>
               <div className="destaques-direita flex flex-row gap-7">
                 <div className="produto-3">
                   <div className="imagem-container">
-                    <img
-                      src="/assets/images/tenis-destque1.jpg"
-                      alt="Imagem 2"
-                      className="imagem-produto-2"
-                    />
+                    <a href="/pages/ver-produto">
+                      <img
+                        src="/assets/images/tenis-destque1.jpg"
+                        alt="Imagem 2"
+                        className="imagem-produto-2"
+                      />
+                    </a>
                   </div>
                 </div>
                 <div className="produto-4">
                   <div className="imagem-container">
-                    <img
-                      src="/assets/images/tenis-destque3.jpg"
-                      alt="Imagem 2"
-                      className="imagem-produto-2"
-                    />
+                    <a href="/pages/ver-produto">
+                      <img
+                        src="/assets/images/tenis-destque3.jpg"
+                        alt="Imagem 2"
+                        className="imagem-produto-2"
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -111,21 +116,25 @@ export default function Home() {
               <div className="grid lg:grid-cols-4 md:grid-cols-3 gap-6">
                 {cardList.map((card) => (
                   <div className="shadow-lg rounded-lg">
-                    <img className="rounded-lg" src={card.img} />
-                    <div className="p-5">
-                      <h3 className="text-2xl font-bold text-slate-700 mb-3">
-                        {card.title}
-                      </h3>
-                      <p className="text-md font-normal text-gray-600">
-                        {card.text}
-                      </p>
-                    </div>
+                    <a href="/pages/ver-produto">
+                      <img className="rounded-lg" src={card.img} />
+                      <div className="p-5">
+                        <h3 className="text-2xl font-bold text-slate-700 mb-3">
+                          {card.title}
+                        </h3>
+                        <p className="text-md font-normal text-gray-600">
+                          {card.text}
+                        </p>
+                      </div>
+                    </a>
                   </div>
                 ))}
               </div>
             </div>
             <div className="btn-container">
-              <button className="btn-blue">Ver todos</button>
+              <a href="/">
+                <button className="btn-blue">Ver todos</button>
+              </a>
             </div>
           </div>
         </section>

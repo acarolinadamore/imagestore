@@ -21,7 +21,7 @@ export default function RootLayout({
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
       />
-      <Link
+      <link
         rel="icon"
         href="/assets/icons/icon-circle.svg"
         type="image/svg+xml"
