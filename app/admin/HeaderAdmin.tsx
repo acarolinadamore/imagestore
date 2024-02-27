@@ -1,9 +1,9 @@
 import React from 'react';
-import '../admin/SidebarStore';
+import '../admin/HeaderAdmin';
 import Link from 'next/link';
-import '../admin/SidebarStore.css';
+import '../admin/HeaderAdmin.css';
 
-const SidebarStore = () => {
+const HeaderAdmin = () => {
   return (
     <div className="header-top-container flex flex-row items-center bg-white">
       <a href="/">
@@ -16,11 +16,15 @@ const SidebarStore = () => {
       </a>
       <div className="header-midle-container"></div>
       <div className="header-client-area">
-        <button>Registre-se</button>
-        <button>Login</button>
+        <Link href="/" className="flex">
+          <p>Login</p>
+        </Link>
+        <Link href="/" className="flex">
+          <p>Sair</p>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default SidebarStore;
+export default HeaderAdmin;

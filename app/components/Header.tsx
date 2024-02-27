@@ -10,7 +10,7 @@ const Header = () => {
         <img
           src="/assets/icons/logo-rosa.svg"
           alt="Logo"
-          width={140}
+          width={170}
           height={100}
         />
       </a>
@@ -36,7 +36,9 @@ const Header = () => {
       </div>
       <div className="header-client-area">
         <button>Registre-se</button>
-        <button>Login</button>
+        <Link href="/admin" className="flex">
+          <p>Login</p>
+        </Link>
       </div>
     </div>
   );
